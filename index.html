@@ -4,9 +4,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+  <title>♚ Hearo's Journey ♚</title>
 </head>
 <body>
-  
+<main>
+  <br>
+  <div id="container">
+      <h1>♚ Hearo's Journey ♚</h1>
+        <button id="startButton" class="button" onclick="generateTest()">Click to Start!</button>
+        <div id="questionArea" style="display: none;">
+          <h3 id="questionIndex"></h3>
+          <button class="button" onclick="replayInterval()">Replay Interval</button>
+          <br>
+          <select id="answer">
+            <option value="0">Major Second</option>
+            <option value="1">Minor Second</option>
+            <option value="2">Major Third</option>
+            <option value="3">Minor Third</option>
+            <option value="4">Perfect Fourth</option>
+            <option value="5">Tritone</option>
+            <option value="6">Perfect Fifth</option>
+            <option value="7">Major Sixth</option>
+            <option value="8">Minor Sixth</option>
+            <option value="9">Major Seventh</option>
+            <option value="10">Minor Seventh</option>
+            <option value="11">Octave</option>
+          </select>
+          <button class="button" onclick="confirmAnswer()">Confirm Answer</button>
+        </div>
+        <div id="message"></div>
+        <br>
+  </div>
+  <audio style="display: none;" id="Msecond0" preload src="Intervals/Major_Seconds/Major2Up.mp3"></audio>
+  <audio style="display: none;" id="Msecond1" preload src="Intervals/Major_Seconds/Major2Down.mp3"></audio>
+
+  <audio style="display: none;" id="msecond0" preload src="Intervals/Minor_Seconds/Minor2Up.mp3"></audio>
+  <audio style="display: none;" id="msecond1" preload src="Intervals/Minor_Seconds/Minor2Down.mp3"></audio>
+
+  <audio style="display: none;" id="Mthird0" preload src="Intervals/Major_Thirds/Major3Up.mp3"></audio>
+  <audio style="display: none;" id="Mthird1" preload src="Intervals/Major_Thirds/Major3Down.mp3"></audio>
+
+  <audio style="display: none;" id="mthird0" preload src="Intervals/Minor_Thirds/Minor3Up.mp3"></audio>
+  <audio style="display: none;" id="mthird1" preload src="Intervals/Minor_Thirds/Minor3Down.mp3"></audio>
+
+  <audio style="display: none;" id="fourth0" preload src="Intervals/Perfect_Fourths/Perfect4Up.mp3"></audio>
+  <audio style="display: none;" id="fourth1" preload src="Intervals/Perfect_Fourths/Perfect4Down.mp3"></audio>
+
+  <audio style="display: none;" id="tritone0" preload src="Intervals/Tritones/TritoneUp.mp3"></audio>
+  <audio style="display: none;" id="tritone1" preload src="Intervals/Tritones/TritoneDown.mp3"></audio>
+
+  <audio style="display: none;" id="fifth0" preload src="Intervals/Perfect_Fifths/Perfect5Up.mp3"></audio>
+  <audio style="display: none;" id="fifth1" preload src="Intervals/Perfect_Fifths/Perfect5Down.mp3"></audio>
+
+  <audio style="display: none;" id="Msixth0" preload src="Intervals/Major_Sixths/Major6Up.mp3"></audio>
+  <audio style="display: none;" id="Msixth1" preload src="Intervals/Major_Sixths/Major6Down.mp3"></audio>
+
+  <audio style="display: none;" id="msixth0" preload src="Intervals/Minor_Sixths/Minor6Up.mp3"></audio>
+  <audio style="display: none;" id="msixth1" preload src="Intervals/Minor_Sixths/Minor6Down.mp3"></audio>
+
+  <audio style="display: none;" id="Mseventh0" preload src="Intervals/Major_Sevenths/Major7Up.mp3"></audio>
+  <audio style="display: none;" id="Mseventh1" preload src="Intervals/Major_Sevenths/Major7Down.mp3"></audio>
+
+  <audio style="display: none;" id="mseventh0" preload src="Intervals/Minor_Sevenths/Minor7Up.mp3"></audio>
+  <audio style="display: none;" id="mseventh1" preload src="Intervals/Minor_Sevenths/Minor7Down.mp3"></audio>
+
+  <audio style="display: none;" id="octave0" preload src="Intervals/Octaves/OctaveUp.mp3"></audio>
+  <audio style="display: none;" id="octave1" preload src="Intervals/Octaves/OctaveDown.mp3"></audio>
+
+</main>
 </body>
 </html>
