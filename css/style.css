@@ -1,0 +1,62 @@
+html, body {
+	font-family: 'Papyrus';
+	height: 100%;
+	width: 100%;
+	background: url("https://source.unsplash.com/tn2rBnvIl9I/1314x877");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	}
+
+  #container {
+	  position: relative;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  border: 10px solid black;
+	  border-radius: 15px;
+	  background: linear-gradient(to top, rgb(80, 255, 112) 0%, rgb(124, 198, 255) 100%);
+	  text-align: center;
+	  width: 50%;
+	  max-width: 32rem;
+   }
+  
+  #message {
+	  padding-top: 15px;
+  }
+  
+  .button {
+	  display: inline-block;
+	  padding: 15px 25px;
+	  font-size: 24px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: black;
+	  background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+	  border: none;
+	  border-radius: 15px;
+	  box-shadow: 0 5px slategray;
+  }
+  
+  .button:hover {background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);}
+  
+  .button:active {
+	  background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+	  box-shadow: 0 5px slategray;
+	  transform: translateY(4px);
+  }
+  
+  select {
+	  margin: 50px;
+	  width: 200px;
+	  padding: 5px 35px 5px 5px;
+	  font-size: 16px;
+	  border: 1px solid #CCC;
+	  height: 50px;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+  }
