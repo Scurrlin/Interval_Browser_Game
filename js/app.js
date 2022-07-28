@@ -1,28 +1,24 @@
-//https://mitchum.blog/games/ear-trainer/
-//^Pulled much of the basic framework  and functionality from the blog/accompanying git found in the website above
-
-//I expanded the number of intervals from 5 to 12 and recorded my own intervals in Pro Tools which are stored in a local
-//"Intervals" directory. At present, the mp3 files play each interval twice, but I plan to bounce new mp3 files that
-//only play them once. This will not take long as the midi has already been tracked.
-
-//The length of the current mp3 files presents an issue in that if you submit an answer in the drop down menu
-//before the first mp3 is done playing, the next interval will begin over the top of the first one.
-//An alternative solution to the one outlined above would be writing a function to stop the first interval once an
-//answer is submitted; will explore this today before attempting to bounce new mp3 files.
-
 let questions = [];
 let answers = [];
 let questionIndex = 0;
 let correctAnswers = 0;
 let questionCount = 10;
+let beginTime = "";
+let lastId;
+let startId;
 
-let playInterval = function( id )
-{
-    document.getElementById(id).play();
+let playInterval = function( id ){
+   if(lastId){
+    document.getElementById(lastId).pause();
+   }
+   document.getElementById(id).play();
+   lastId = id
+   if(startId){
+   document.getElementById(startId).pause();
+   }
 }
 
-let generateTest = function()
-{
+let generateTest = function(){
     show("questionArea");
     hide("startButton");
     show("message", "&nbsp");
@@ -38,6 +34,7 @@ let generateTest = function()
         answers[question] = interval;
     }
 
+    beginTime = Date.now();
     nextQuestion();
 }
 
@@ -61,8 +58,8 @@ let confirmAnswer = function()
     }
 }
 
-let evaluateAnswer = function()
-{
+let evaluateAnswer = function() {
+
     let id = document.getElementById("answer").value;
     let interval = getInterval( id );
     if( interval.code === answers[questionIndex].code)
@@ -80,9 +77,34 @@ let finishGame = function()
 {
     show("startButton");
     hide("questionArea");
+    let highScoreMessage = "You didn't beat your high score. ";
+    let delta = Date.now() - beginTime; // milliseconds elapsed since start
+    let completionSeconds = Math.floor(delta / 1000);
+    if( saveHighScore( completionSeconds ) )
+    {
+        highScoreMessage = "New high score! ";
+    }
+
+    show( "message", highScoreMessage +
+                         "You got " + correctAnswers +
+                         " out of " + questionCount +
+                         " correct in " + completionSeconds + " seconds." );
 }
 
-//Need to provide "win condition" function and "King's Approval" response based on ('score' >= 5)
+let saveHighScore = function( completionSeconds )
+{
+    let highScore = false;
+    let score = localStorage.getItem('score');
+    let time = localStorage.getItem('time');
+    if( correctAnswers > score || ( correctAnswers >= score && completionSeconds < time ) )
+    {
+        localStorage.setItem('score', correctAnswers);
+        localStorage.setItem('time', completionSeconds);
+        highScore = true;
+    }
+    return highScore;
+}
+
 
 let replayInterval = function()
 {
@@ -112,6 +134,7 @@ let hide = function( id )
 
 let getInterval = function( id )
 {
+    startId = id
     id = id + "";
     let interval = { code: "Msecond", name: "Major Second" }
     switch( id )
