@@ -24,6 +24,7 @@ Once you click the "Click to Start!" button, the first interval will play twice.
 
 ![Wireframe](https://i.imgur.com/f7KMAin.png)
 ![Pro Tools](https://i.imgur.com/k0oIJH0.png)
+![Intervals](https://i.imgur.com/nFrzmhL.png)
 
 ## Technologies Used
 * HTML
