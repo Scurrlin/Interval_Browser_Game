@@ -17,6 +17,8 @@ Once you click the "Click to Start!" button, the first interval will play twice.
 - Major and minor sevenths
 - Octave
 
+Your High Score is determined by both your interval recognition accuracy and the speed at which you complete the 10 questions.
+
 ![Play Interval](https://i.imgur.com/Dz15ZIC.png)
 ![Drop-Down](https://i.imgur.com/gtZJLgl.png)
 
