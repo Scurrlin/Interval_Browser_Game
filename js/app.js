@@ -159,7 +159,7 @@ let getInterval = function( id )
       interval = { code: "Msixth", name: "Major Sixth" };
       break;
     case "8":
-      interval = { code: "msixth", name: "Minor Sixth"};
+      interval = { code: "msixth", name: "Minor Sixth" };
       break;
     case "9":
       interval = { code: "Mseventh", name: "Major Seventh" };
