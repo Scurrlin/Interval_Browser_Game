@@ -138,37 +138,37 @@ let getInterval = function( id )
       interval = { code: "Msecond", name: "Major Second" };
       break;
     case "1":
-      interval = { code: "msecond", name: "Minor Second"}
+      interval = { code: "msecond", name: "Minor Second"};
       break;
     case "2":
       interval = { code: "Mthird", name: "Major Third" };
       break;
     case "3":
-      interval = { code: "mthird", name: "Minor Third"}
+      interval = { code: "mthird", name: "Minor Third"};
       break;
     case "4":
-      interval = { code: "fourth", name: "Perfect Fourth" }
+      interval = { code: "fourth", name: "Perfect Fourth" };
       break;
     case "5":
-      interval = { code: "tritone", name: "Tritone" }
+      interval = { code: "tritone", name: "Tritone" };
       break;
     case "6":
-      interval = { code: "fifth", name: "Perfect Fifth" }
+      interval = { code: "fifth", name: "Perfect Fifth" };
       break;
     case "7":
       interval = { code: "Msixth", name: "Major Sixth" };
       break;
     case "8":
-      interval = { code: "msixth", name: "Minor Sixth"}
+      interval = { code: "msixth", name: "Minor Sixth"};
       break;
     case "9":
-      interval = { code: "Mseventh", name: "Major Seventh" }
+      interval = { code: "Mseventh", name: "Major Seventh" };
       break;
     case "10":
-      interval = { code: "mseventh", name: "Minor Seventh" }
+      interval = { code: "mseventh", name: "Minor Seventh" };
       break;
     case "11":
-      interval = { code: "octave", name: "Octave" }
+      interval = { code: "octave", name: "Octave" };
       break;
     default:
         
