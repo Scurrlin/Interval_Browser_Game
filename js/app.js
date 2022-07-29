@@ -108,7 +108,7 @@ let replayInterval = function()
 
 let getRandomInterval = function()
 {
-  let interval = getRandomInteger( 0, 9 );
+  let interval = getRandomInteger( 0, 12 );
   return getInterval( interval );
 }
 
